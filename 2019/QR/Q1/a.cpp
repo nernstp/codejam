@@ -1,5 +1,8 @@
 #include <iostream>
 #include <string>
+
+using namespace std;
+
 int main(){
     int t;
     cin>>t;
@@ -8,15 +11,15 @@ int main(){
         string b="";
         cin>>a;
         for(int j=0;j<a.length();j++){
-            if(a[i]=='4'){
-                a[i]='2';
-                b++"2";
+            if(a[j]=='4'){
+                a[j]='2';
+                b+="2";
             }
             else
                 if(!b.empty())
-                    b++"0";
+                    b+="0";
         }
-        printf("Case #%i: %s %s",i, a, b);
+        cout<<"Case #"<<i<<": "<< a << " " <<b<<endl;
     }
     return 0;
 }
