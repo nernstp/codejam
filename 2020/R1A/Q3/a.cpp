@@ -95,16 +95,16 @@ int main(){
                     if(alive[j][k]){
                         
                         while(e[j][k]<c&&!alive[j][e[j][k]])
-                            e[j][k]+=1;
+                            e[j][k]=e[j][e[j][k]];
                             
                         while(s[j][k]<r&&!alive[s[j][k]][k])
-                            s[j][k]+=1;
+                            s[j][k]=s[s[j][k]][k];
                             
                         while(w[j][k]>=0&&!alive[j][w[j][k]])
-                            w[j][k]-=1;
+                            w[j][k]=w[j][w[j][k]];
                             
                         while(n[j][k]>=0&&!alive[n[j][k]][k])
-                            n[j][k]-=1;
+                            n[j][k]=n[n[j][k]][k];
                     }
                 }
                 // for(int j=0;j<r;j++){
